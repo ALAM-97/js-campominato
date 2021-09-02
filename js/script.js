@@ -27,24 +27,32 @@ var genBtn = document.getElementById("gen-btn");
 
 genBtn.addEventListener("click",
     function () {
-        // 2.
         for (var i = 1; i <= 100; i++) {
             document.getElementById("wrapper").innerHTML += `<div class="square">${i}</div>`;
         }
 
-        // 3.
+        // 2.
         document.getElementById("wrapper").addEventListener("click",
             function (event) {
                 var selectNum = event.target.innerHTML;
-                clicked.push(selectNum);
+
                 event.target.classList.add("clicked");
                 if (clicked.includes(selectNum)) {
-                    alert("no");
-                }
+                    alert("Hai già selezionato questa casella");
+                } else {
+                    clicked.push(selectNum);
+                }  
+
+                // 3.
+                
                 
             }
         );
+        
+        
     }
 );
+
+
 
 
