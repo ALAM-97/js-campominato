@@ -29,7 +29,7 @@ genBtn.addEventListener("click",
     function () {
         // 2.
         for (var i = 1; i <= 100; i++) {
-            document.getElementById("wrapper").innerHTML += `<div class="square"> ${i} </div>`;
+            document.getElementById("wrapper").innerHTML += `<div class="square">${i}</div>`;
         }
 
         // 3.
@@ -38,13 +38,13 @@ genBtn.addEventListener("click",
                 var selectNum = event.target.innerHTML;
                 clicked.push(selectNum);
                 event.target.classList.add("clicked");
-
-                var selected = document.getElementsByClassName("clicked");
-                if (clicked.includes(event.target.innerHTML)) {
-                    clicked.!push(selectNum);
+                if (clicked.includes(selectNum)) {
+                    alert("no");
                 }
+                
             }
         );
     }
 );
+
 
