@@ -7,18 +7,33 @@
 /* BODY */
 
 body {
-    margin-bottom: 100px;
     font-family: 'ZCOOL KuaiLe', cursive;
+    background-image: url(../img/bg-3.1.jpg);
+    background-size: cover;
+    
+}
+.flex-cont {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 200px;
+    justify-content: space-around;
 }
 .user-input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 0;
+    margin-right: 200px;
+    margin-top: 100px;
+    vertical-align: middle;
+    width: 450px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
 }
 label {
     font-size: 2rem;
-    color: dodgerblue;
+    color:#356604;
+    padding-top: 10px;
 }
 input {
     margin-top: 20px;
@@ -48,16 +63,17 @@ button:hover {
 #wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 700px;
-    margin: auto;
+    width: 450px;
+    margin-right: auto;
+    margin-left: 330px;
 }
 .square {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
-    background-image: url("../img/47056.jpg");
+    width: 45px;
+    height: 45px;
+    background-image: url("../img/Sand.jpg");
     background-size: 100%;
     border: 1px solid #fff;
     color: #fff;
@@ -68,4 +84,7 @@ button:hover {
 }
 .square.bomb {
     background-image: url("../img/4872522.jpg");
+    background-size: cover;
+    background-position: center;
+    font-size: 0rem;
 }

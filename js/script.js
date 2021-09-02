@@ -2,13 +2,13 @@
 // 1a. I numeri non possono essere duplicati.
 // 2. In seguito il giocatore clicca sulle celle numerate(non può cliccare più volte sulla stessa cella).
 // 3. La partita termina quando il giocatore clicca su una bomba o clicca su tutte le celle che non sono delle bombe.
-// 4 Al termine della partita il software deve comunicare il punteggio.
+// 4. Al termine della partita il software deve comunicare il punteggio.
 
 // FUNCTIONS
 // 1.
 function bombGenerator(arr) {
     for (var i = 1; i <= 16; i++) {
-        var randomNum = Math.round(Math.random() * 100 + 1);
+        var randomNum = Math.round(Math.random() * 100);
         // 1a.
         if (arr.includes(randomNum)) {
             i += -1;
@@ -44,12 +44,15 @@ genBtn.addEventListener("click",
                 }  
 
                 // 3.
-                
+                for (var i = 0; i < bombs.length; i++) {
+                    if (bombs[i] == selectNum) {
+                        event.target.classList.add("bomb");
+                        alert("il tuo punteggio è " + (clicked.length - 1));
+                    }
+                }
                 
             }
         );
-        
-        
     }
 );
 
