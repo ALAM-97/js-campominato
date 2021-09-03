@@ -23,49 +23,61 @@ body {
     flex-direction: column;
     align-items: center;
     margin-right: 200px;
-    margin-top: 100px;
     vertical-align: middle;
     width: 450px;
-    height: 200px;
+    height: 300px;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
+    border: 3px solid #356604;
 }
 label {
     font-size: 2rem;
     color:#356604;
     padding-top: 10px;
 }
-input {
-    margin-top: 20px;
+select {
+    margin-top: 15px;
     padding: 10px 20px;
     text-align: center;
-    border: 1px solid dodgerblue;
+    border: 2px solid #356604;
+    color: #356604;
     width: 300px;
+    font-size: 1.2rem;
 }
-input:hover {
-    border: 1px solid fuchsia;
+select:hover {
+    border: 2px solid #66ac21;
 }
 button {
-    padding: 5px 15px;
+    padding: 10px 20px;
     margin-top: 20px;
     border-radius: 5px;
-    color: dodgerblue;
-    border: 1px solid dodgerblue;
-}
-button:hover {
-    color: fuchsia;
-    border: 1px solid fuchsia;
-}
-#alert {
-    margin: 20px 0;
+    color: #356604;
+    border: 2px solid #356604;
+    font-family: 'ZCOOL KuaiLe', cursive;
     font-weight: bold;
 }
-#wrapper {
+button:hover {
+    color: #66ac21;
+    border: 2px solid #66ac21;
+}
+#alert {
+    margin: 40px 0;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.easy-field {
     display: flex;
     flex-wrap: wrap;
     width: 450px;
     margin-right: auto;
     margin-left: 330px;
+}
+.dif-field {
+    width: 405px;
+}
+.imp-field {
+    width: 315px;
+    height: 315px;
 }
 .square {
     display: flex;
@@ -75,9 +87,16 @@ button:hover {
     height: 45px;
     background-image: url("../img/Sand.jpg");
     background-size: 100%;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     color: #fff;
     font-size: 1.7rem; 
+}
+.square.water {
+    background-image: url("../img/water.jpg");
+}
+.square.cave {
+    background-image: url("../img/cave.jpg");
+    background-size: 150%;
 }
 .square.clicked {
     color: rgba(0, 0, 0, 1);
