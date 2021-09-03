@@ -37,7 +37,7 @@ var refreshBtn = document.getElementById("refresh");
 genBtn.addEventListener("click",
     function () {
 
-        var diffSelect = document.getElementById("dif").value;;
+        var diffSelect = document.getElementById("dif").value;
 
         if (diffSelect == 1) {
             for (var i = 1; i <= 100; i++) {
@@ -46,9 +46,9 @@ genBtn.addEventListener("click",
 
             // 2.
             document.getElementById("wrapper").addEventListener("click",
-                function (event) {
+                function(event) {
                     var selectNum = event.target.innerHTML;
-
+                    
                     if (clicked.includes(selectNum)) {
                         alert("Hai già selezionato questa casella");
                     } else {
@@ -63,7 +63,10 @@ genBtn.addEventListener("click",
                     for (var i = 0; i < bombs.length; i++) {
                         if (bombs[i] == selectNum) {
                             event.target.classList.add("bomb");
-                            document.getElementById("alert").innerHTML += "IL TUO PUNTEGGIO E': " + (clicked.length - 1);
+                            document.getElementById("alert").innerHTML += "IL TUO PUNTEGGIO E': " + (clicked.length);
+                            if (clicked.includes(selectNum)) {
+                                clicked.pop();
+                            }
                         }
                     }
 
@@ -94,7 +97,10 @@ genBtn.addEventListener("click",
                     for (var i = 0; i < bombs.length; i++) {
                         if (bombs[i] == selectNum) {
                             event.target.classList.add("bomb");
-                            document.getElementById("alert").innerHTML += "IL TUO PUNTEGGIO E': " + (clicked.length - 1);
+                            document.getElementById("alert").innerHTML += "IL TUO PUNTEGGIO E': " + (clicked.length);
+                            if (clicked.includes(selectNum)) {
+                                clicked.pop();
+                            }
                         }
                     }
 
@@ -125,10 +131,12 @@ genBtn.addEventListener("click",
                     for (var i = 0; i < bombs.length; i++) {
                         if (bombs[i] == selectNum) {
                             event.target.classList.add("bomb");
-                            document.getElementById("alert").innerHTML += "IL TUO PUNTEGGIO E': " + (clicked.length - 1);
+                            document.getElementById("alert").innerHTML += "IL TUO PUNTEGGIO E': " + (clicked.length);
+                            if (clicked.includes(selectNum)) {
+                                clicked.pop();
+                            }
                         }
                     }
-
                 }
             );
         }
